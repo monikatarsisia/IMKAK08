@@ -28,11 +28,11 @@ void loop() {
   sensor = ultrasonicSensor();
   if (sensor == sensorRef) {
   // Tidak terdeteksi apa-apa
-    Serial.print("AMAN");
+    Serial.println("status :: AMAN");
     sendDataID("0","1234");
   } else {
   // Terdeteksi sesuatu
-    Serial.print("terdeteksi");
+    Serial.print("status :: BAHAYA TERDETEKSI");
     sendDataID("1","0000");
   }
   sensorRef = sensor;
